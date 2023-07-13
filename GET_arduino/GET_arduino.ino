@@ -31,21 +31,6 @@ int SQUAT_KNEE_ANGLE = 90; // degrees
 const char *ssid = "GET";
 WiFiServer server(80);
 
-#define HTML '<!DOCTYPE html>\
-<html lang="en" onclick="jump()">\
-<head>\
-    <meta charset="UTF-8">\
-    <title>Jump Game</title>\
-</head>\
-<body>\
-    <div class="game">\
-        <div id="character"></div>\
-        <div id="block"></div>\
-    </div>\
-    <p>Score: <span id="scoreSpan"></span></p>\
-</body>\
-</html>'
-
 void setup() {
 
   // ON/OFF Switch
@@ -96,9 +81,9 @@ void loop() {
               client.println();
   
               // the content of the HTTP response follows the header:
-              client.print("Click <a href=\"/H\">here</a> to turn ON the LED.<br>");
-              client.print("Click <a href=\"/L\">here</a> to turn OFF the LED.<br>");
-              client.print("<script>jump=true</script>");
+//              client.print(HTML);
+//              client.print(CSS);
+//              client.print(SCRIPT);
   
               // The HTTP response ends with another blank line:
               client.println();
