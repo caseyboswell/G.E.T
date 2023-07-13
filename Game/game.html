@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang='en' onclick='jump()'>
+<html lang='en'>
 <head>
     <meta charset='UTF-8'>
     <title>Jump Game</title>
+
+  <link rel="stylesheet" href="game.css">
+  
 </head>
 <body>
-    <div class='game'>
-        <div id='character'></div>
-        <div id='block'></div>
+    <div id="game" class='game'>
+        <div id='ground'></div>
+        <div id='background'></div>
+        <div id='treetops'></div>
+        <div id='character' class="character running">
+            <img class="charImg running" src="./RunA.png" />
+            <img class="charImg running" src="./RunB.png" />
+            <img class="charImg running" src="./RunC.png" />
+            <img class="charImg running" src="./RunD.png" />
+            
+            <img class="charImg jumping" src="./RunA.png" />
+            
+            <img class="charImg ducking" src="./SlideA.png" />
+
+        </div>
     </div>
+    <script src="game.js" ></script>
     <p>Score: <span id='scoreSpan'></span></p>
 </body>
 </html>
