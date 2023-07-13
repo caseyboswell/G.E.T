@@ -15,8 +15,27 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 #include "game.h"
+#include "SR04.h"
 
 #define LED_BUILTIN 2   // Set the GPIO pin where you connected your test LED or comment this line out if your dev board has a built-in LED
+
+// ON/OFF Switch
+const int buttonPin = 9;    // the number of the pushbutton pin
+bool ON = false;         // the current state of the output pin (initially OFF)
+int buttonState;             // the current reading from the input pin
+int lastButtonState = LOW;   // the previous reading from the input pin
+unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
+unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
+
+// Chest Ultrasonic Sensor
+#define ULTRASONIC_TRIG_PIN 26
+#define ULTRASONIC_ECHO_PIN 25
+SR04 ultrasonic_sensor = SR04(ULTRASONIC_ECHO_PIN, ULTRASONIC_TRIG_PIN);
+long chest_distance;
+
+// Controls
+int PUSH_UP_DISTANCE = 20; // cm
+int SQUAT_KNEE_ANGLE = 90; // degrees
 
 // Set these to your desired credentials.
 const char *ssid = "GET";
@@ -42,6 +61,14 @@ void setup() {
 }
 
 void loop() {
+
+  // Collect & record chest distance measure
+  chest_distance = ultrasonic_sensor.Distance();
+  if (chest_distance <  PUSH_UP_DISTANCE) {
+    Serial.println("Pushup detected.");
+//      client.print("<script>pushup=true</script>");
+  }
+  printSensorValues();
   
   WiFiClient client = server.available();   // listen for incoming clients
   if (client) {                             // if you get a client,
@@ -85,10 +112,45 @@ void loop() {
         if (currentLine.endsWith("GET /L")) {
           digitalWrite(LED_BUILTIN, LOW);                // GET /L turns the LED off
         }
+        
       }
     }
     // close the connection:
     client.stop();
     Serial.println("Client Disconnected.");
   }
+}
+
+// Helper Functions
+
+void printSensorValues() {
+    Serial.print("Chest distance  = ");
+    Serial.print(chest_distance);
+    Serial.print("cm");
+    Serial.println();
+//    Serial.print(", ");
+//    Serial.print("Other = ");
+//    Serial.print(...);
+//    Serial.println("cm");
+    delay(100);
+}
+
+void checkForButtonPress() {
+  
+  int reading = digitalRead(buttonPin);
+
+  if (reading != lastButtonState) {
+    lastDebounceTime = millis();
+  }
+  
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (reading != buttonState) {
+      buttonState = reading;
+      if (buttonState == HIGH) {
+        ON = !ON; // Switch the ON/OFF state
+      }
+    }
+  }
+  
+  lastButtonState = reading;
 }
