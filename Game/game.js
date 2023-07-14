@@ -97,11 +97,11 @@ function duck() {
 
 function controller(e){
     
-    if (e.key == "ArrowUp"){
-        jump()
+    if (e.key == "ArrowUp" || e == "squat"){
+        obs.jump = true; //jump()
     }
-    else if (e.key == "ArrowDown"){
-        duck()
+    else if (e.key == "ArrowDown" || e == "pushup"){
+        obs.duck = true; //duck()
     }
 }
 
@@ -122,7 +122,6 @@ function SpawnBlock(count){
 }
 
 var checkDead = setInterval(function() {
-    console.log(obs);
     var topBlock = blockList[0];
     
     if (topBlock.alive){
@@ -132,8 +131,9 @@ var checkDead = setInterval(function() {
         if (blockBox.left < charBox.left+charBox.width){
             if (topBlock.type){
                 if(blockBox.bottom > charBox.top){
-                    if (obs.jump == true){
-                        jump();
+                    if (obs.duck == true){
+                        duck();
+                        obs.duck = false;
                     }
                     else{
                         console.log("ahhhhh")
@@ -142,8 +142,9 @@ var checkDead = setInterval(function() {
             }
             else{
                 if(charBox.bottom > blockBox.top){
-                    if (obs.duck == true){
-                        duck();
+                    if (obs.jump == true){
+                        jump();
+                        obs.jump = false;
                     }
                     else{
                         console.log("ahhhhh")
