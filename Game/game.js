@@ -5,7 +5,7 @@ class obstacle {
         this.blocker = null;
         
         this.createBlocker();
-        document.getElementById("game").appendChild(this.blocker);
+        document.getElementById("blockers").appendChild(this.blocker);
         this.alive = true;
         
         var that = this;
@@ -16,7 +16,7 @@ class obstacle {
         blocker.setAttribute('id', String(this.ID));
         
         if (this.type == 1){
-            blocker.setAttribute('class', "block Stalactite");
+            blocker.setAttribute('class', "block StalactiteWrapper Stalactite");
         }else{
             blocker.setAttribute('class', "block Stalagmite");
         }
@@ -33,7 +33,7 @@ class obstacle {
         
     }
     getDist(){
-        
+        console.log(this.blocker.style.left);
     }
 }
 
@@ -122,7 +122,7 @@ var checkDead = setInterval(function() {
     var topBlock = blockList[0];
     
     if (topBlock.alive){
-        blockBox = document.getElementById(topBlock.ID).getBoundingClientRect();
+        blockBox = topBlock.blocker.getBoundingClientRect();
         charBox = document.getElementById("character").getBoundingClientRect();
         
         if (blockBox.left < charBox.left+charBox.width){
