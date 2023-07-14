@@ -25,32 +25,372 @@
     background-color: #024601;
     height: 60%;
     
-    background-repeat: repeat-x;
-    background-image: url("./treeBackground.png");
+    /*background-repeat: repeat-x;
+    background-image: url("./treeBackground.png");*/
     
     position: absolute;
     bottom: 50px;
+}
+#T1{
+    position: absolute;
+    background-color: #5d4c40;
+    height: 100%;
+    width: 3%;
+    left: 10%;
+}
+#T2{
+    position: absolute;
+    background-color: #5d4c40;
+    height: 100%;
+    width: 3%;
+    left: 43%;
+}
+#T3{
+    position: absolute;
+    background-color: #5d4c40;
+    height: 100%;
+    width: 3%;
+    left: 76%;
+}
+#T4{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 17%;
+}
+#T5{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 50%;
+}
+#T6{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 83%;
+}
+#T7{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 13%;
+}
+#T8{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 46%;
+}
+#T9{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 79%;
+}
+#T10{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 3%;
+}
+#T11{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 39%;
+}
+#T12{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 73%;
+}
+#T13{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 0%;
+}
+#T14{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 33%;
+}
+#T15{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 66%;
+}
+#T16{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 7%;
+}
+#T17{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 40%;
+}
+#T18{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 69%;
+}
+#T19{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 27%;
+}
+#T20{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 55%;
+}
+#T21{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 93%;
+}
+#T22{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 21%;
+}
+#T23{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 54%;
+}
+#T24{
+    position: absolute;
+    background-color: #5d4c30;
+    height: 100%;
+    width: 3%;
+    left: 93%;
 }
 #treetops {
     width: 100%;
     height: 40%;
     
-    background-repeat: repeat-x;
+    /*background-repeat: repeat-x;
     background-size: contain;
-    background-image: url("./treeTops.png");
+    background-image: url("./treeTops.png");*/
     
     position: absolute;
     top: 0%;
+}
+#top1{
+  height: 100%;
+  width: 10%;
+  background-color: #918411;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+#top2{
+  height: 100%;
+  width: 10%;
+  background-color: #918411;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+}
+#top3{
+  height: 100%;
+  width: 10%;
+  background-color: #918411;
+  border-radius: 50%;
+  position: absolute;
+  left: 73%;
+}
+#top4{
+  height: 100%;
+  width: 10%;
+  background-color: #918411;
+  border-radius: 50%;
+  position: absolute;
+  left: 84%;
+}
+#top5{
+  height: 90%;
+  width: 10%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: -5%;
+}
+#top6{
+  height: 100%;
+  width: 14%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+}
+#top7{
+  height: 100%;
+  width: 10%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  left: 53%;
+}
+#top8{
+  height: 100%;
+  width: 10%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  left: 97%;
+}
+#top9{
+  height: 100%;
+  width: 10%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  left: 12%;
+}
+#top10{
+  height: 100%;
+  width: 15%;
+  background-color: #618411;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+}
+#top11{
+  height: 100%;
+  width: 15%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 90%;
+}
+#top12{
+  height: 100%;
+  width: 12%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 6%;
+}
+#top13{
+  height: 100%;
+  width: 10%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 37%;
+}
+#top14{
+  height: 100%;
+  width: 10%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 22%;
+}
+#top15{
+  height: 100%;
+  width: 15%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 65%;
+}
+#top16{
+  height: 100%;
+  width: 12%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 57%;
+}
+#top17{
+  height: 100%;
+  width: 12%;
+  background-color: #218421;
+  border-radius: 50%;
+  position: absolute;
+  left: 76%;
 }
 
 .character{
     width: 100px;
     height: 40%;
-    background-color: red;
+    /*background-color: red;*/
     position: absolute;
     bottom: 50px;
     left: 0px;
 }
+#head{
+    background-color: lightpink;
+    position: absolute;
+    top: 20px;
+    height: 20%;
+    width: 50%;
+    right: 0px;
+}
+#neck{
+    background-color: lightpink;
+    position: absolute;
+    top: 30px;
+    height: 20%;
+    width: 20%;
+    right: 25%;
+}
+#body{
+    background-color: brown;
+    position: absolute;
+    top: 30%;
+    height: 50%;
+    width: 50%;
+    right: 25%;
+}
+#legL1{
+    background-color: black;
+    position: absolute;
+    top: 60%;
+    height: 40%;
+    width: 50%;
+    right: 25%;
+}
+
+/*
 #character img {
     display: none;
 }
@@ -61,6 +401,7 @@
     position: relative;
     height: 100%;
 }
+*/
 
 .jump{
     animation: jump 1s linear;
@@ -105,12 +446,15 @@
     height: 40%;
     aspect-ratio: 1 / 2;
     
-    background-size:contain;
-    background-image: url("VineA.png");
+    background-color: #6d4c40;
+    
+    /*background-size:contain;
+    background-image: url("VineA.png");*/
 }
 .Stalagmite{
     bottom: 23px;
-    background-image: url("logA.png");
+    background-color: #8d4c40;
+    /*background-image: url("logA.png");*/
 }
 
 @keyframes block{

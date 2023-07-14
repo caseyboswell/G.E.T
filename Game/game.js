@@ -41,7 +41,7 @@ class charact{
     constructor(){
         this.state = "running";
         this.animateInterval = null;
-        this.animate();
+        //this.animate();
         
         this.duck = false;
         this.jump = false;
