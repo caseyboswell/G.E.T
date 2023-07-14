@@ -42,6 +42,9 @@ class charact{
         this.state = "running";
         this.animateInterval = null;
         this.animate();
+        
+        this.duck = false;
+        this.jump = false;
     }
     
     animate(){
@@ -119,6 +122,7 @@ function SpawnBlock(count){
 }
 
 var checkDead = setInterval(function() {
+    console.log(obs);
     var topBlock = blockList[0];
     
     if (topBlock.alive){
@@ -128,12 +132,22 @@ var checkDead = setInterval(function() {
         if (blockBox.left < charBox.left+charBox.width){
             if (topBlock.type){
                 if(blockBox.bottom > charBox.top){
-                    console.log("ahhhhh")
+                    if (obs.jump == true){
+                        jump();
+                    }
+                    else{
+                        console.log("ahhhhh")
+                    }
                 }
             }
             else{
                 if(charBox.bottom > blockBox.top){
-                    console.log("ahhhhh")
+                    if (obs.duck == true){
+                        duck();
+                    }
+                    else{
+                        console.log("ahhhhh")
+                    }
                 }
             }
         }
