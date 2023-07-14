@@ -31,17 +31,16 @@
     position: absolute;
     bottom: 50px;
 }
-
 #treetops {
     width: 100%;
-    background-color: #024601;
-    height: 60%;
+    height: 40%;
     
     background-repeat: repeat-x;
+    background-size: contain;
     background-image: url("./treeTops.png");
     
     position: absolute;
-    bottom: 40%;
+    top: 0%;
 }
 
 .character{
@@ -85,7 +84,7 @@
 
 
 .block{
-    background-color: blue;
+    /*background-color: blue;*/
     height: 20%;
     aspect-ratio: 1 / 1;
     position: absolute;
@@ -96,12 +95,11 @@
     
     background-repeat: no-repeat;
     background-size: contain;
-    /*background-image: url("TestingBottom.png");*/
 }
 .Stalactite{
     bottom: 40%;
     height: 40%;
-    aspect-ratio: 1 / 1.5;
+    aspect-ratio: 1 / 5;
 }
 .Stalagmite{
     bottom: 23px;

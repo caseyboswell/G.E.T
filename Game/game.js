@@ -82,7 +82,7 @@ function jump() {
     },1000);
 }
 
-function duck(){
+function duck() {
     if(character.classList == "duck"){return}
     obs.state = "ducking";
     character.classList.add("duck");
@@ -115,8 +115,6 @@ function SpawnBlock(count){
     var obs = new obstacle(type, count);
     blockList.push(obs);
     
-    console.log(blockList);
-    
     setTimeout(SpawnBlock, tim, count+1);
 }
 
@@ -143,23 +141,4 @@ var checkDead = setInterval(function() {
     }else{
         blockList.shift();
     }
-    
-    /*
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    let blockHight = parseInt(window.getComputedStyle(block).getPropertyValue("bottom")) + 
-                        parseInt(window.getComputedStyle(block).getPropertyValue("height"));
-    
-    console.log(characterTop <= blockHight);
-    
-    if(blockLeft < 20 && blockLeft > -20 && characterTop <= blockHight){
-        console.log("dead");
-        block.style.animation = "none";
-        //alert("Game Over. score: "+Math.floor(counter/100));
-        counter = 0;
-        block.style.animation = "block 5s infinite linear";
-    }else{
-        counter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
-    }*/
 }, 10);
